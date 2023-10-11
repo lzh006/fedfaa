@@ -84,7 +84,7 @@ def args_parser():
     parser_fedftg.add_argument('--modify', action='store_true', help='wrong updating eq in algo, but seems correct in text')
     parser_fedftg.add_argument('--es_probe', action='store_true', help='just used for hyperparameter searching, tune off in application')
 
-    parser_fedgkf = subparsers.add_parser('fedgkf')
+    parser_fedgkf = subparsers.add_parser('fedhkf')
     parser_fedgkf.add_argument('--dn_publ', type=str, default=None)
     parser_fedgkf.add_argument('--bs_kd', type=int, default=256)
     parser_fedgkf.add_argument('--ep_kd', type=int, default=20, help='20 by paper FedCG')
