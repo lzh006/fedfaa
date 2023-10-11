@@ -1,2 +1,2 @@
 from .fedavg import FedAvg
-from .fedgkf import FedGKF
+from .fedhkf import FedHKF
