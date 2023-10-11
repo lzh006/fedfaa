@@ -3,7 +3,7 @@ from .fedavg import FedAvg
 from operations import extract_feats, kd_epochs, selective_guidance, params_avg, evaluate_clf, create_guidance, selective_guidance_0, create_guidance_0
 import nmslib
 
-class FedGKF(FedAvg):
+class FedHKF(FedAvg):
     def __init__(self, args, root_path, cpriv_sets, gtest_ds, gp_ds):
         super().__init__(args, root_path, cpriv_sets, gtest_ds, gp_ds)
         self.publ_loader = DataLoader(gp_ds, batch_size=args.bs_static, shuffle=False)
