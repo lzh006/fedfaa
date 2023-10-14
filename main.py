@@ -3,7 +3,7 @@ from utils import *
 
 def main(args, root_path):
     cpriv_sets, gtest_ds, gp_ds = load_fed_data(args, data_dir='brenchmarks', root_path=root_path)
-    ALGRS = {'fedavg': FedAvg, 'fedhkf': FedHKF}
+    ALGRS = {'fedavg': FedAvg, 'fedfaa': FedFAA}
     fed = ALGRS[args.algo](args, root_path, cpriv_sets, gtest_ds, gp_ds)
     fed.train()
 
